@@ -25,13 +25,13 @@ class PhoneCall extends Model
     use HasFactory;
 
     protected $fillable = [
-        'callerUserId',
-        'receiverUserId',
+        'caller_user_id',
+        'receiver_user_id',
         'status',
-        'calledAt',
-        'talkStartedAt',
-        'finishedAt',
-        'callCharge',
+        'called_at',
+        'talkStarted_at',
+        'finished_at',
+        'call_charge',
     ];
 
     protected $casts = [
