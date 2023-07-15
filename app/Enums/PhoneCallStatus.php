@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Enum;
+namespace App\Enums;
 
-enum PhoneCallStatus: string
+enum PhoneCallStatus
 {
-    case WaitingReceiver = 'waiting_receiver';
-    case Canceled = 'canceled';
-    case TalkStarted = 'talk_started';
-    case Finished = 'finished';
+    case WaitingReceiver;
+    case Canceled;
+    case TalkStarted;
+    case Finished;
 }
