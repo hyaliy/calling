@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
             ['name' => 'にむら'],
             ['name' => 'けんたろ'],
             ['name' => 'たけいし'],
-            ['name' => 'me']
+            ['name' => 'me'],
         ]);
     }
 }
