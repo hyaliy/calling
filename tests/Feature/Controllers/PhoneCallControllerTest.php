@@ -28,7 +28,7 @@ class PhoneCallControllerTest extends TestCase
 
         // when
         $actual = $this->postJson('/api/phone_calls', [
-            'user_id' => $receiver->id
+            'user_id' => $receiver->id,
         ]);
 
         // then
@@ -42,7 +42,7 @@ class PhoneCallControllerTest extends TestCase
             'caller_user_id' => $me->id,
             'receiver_user_id' => $receiver->id,
             'status' => PhoneCallStatus::WaitingReceiver->value,
-            'called_at' => $now
+            'called_at' => $now,
         ]);
     }
 }
