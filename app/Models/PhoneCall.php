@@ -17,7 +17,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property ?Carbon $talkStartedAt
  * @property ?Carbon $finishedAt
  * @property int $callCharge
- * @property-read User $user
+ * @property-read User $caller
+ * @property-read User $receiver
  */
 class PhoneCall extends Model
 {
@@ -43,8 +44,16 @@ class PhoneCall extends Model
     /**
      * @return BelongsTo<User,PhoneCall>
      */
-    public function user(): BelongsTo
+    public function caller(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'caller_user_id');
+    }
+
+    /**
+     * @return BelongsTo<User,PhoneCall>
+     */
+    public function receiver(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'receiver_user_id');
     }
 }
